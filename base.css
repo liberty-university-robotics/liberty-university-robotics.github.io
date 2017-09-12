@@ -1,0 +1,18 @@
+#banner {
+  background-color: #0A254E;
+  color: white;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+
+#banner h1 {
+  text-align: center;
+}
+
+#content {
+  background-color: black;
+}
