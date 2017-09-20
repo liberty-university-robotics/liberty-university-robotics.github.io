@@ -2,18 +2,20 @@
 <html>
 <head>
 <title>Vex Programming Info</title>
-<link href="/base.css" rel="stylesheet"/>
+<link href="base.css" rel="stylesheet"/>
 </head>
 <body>
 <div id='banner'>
 <h1>Various tidbits about vex programming at LU</h1>
 </div>
 <div id='nav'>
-<a href="/index.html"><h1>Home</h1></a>
+<br><br>
+<br><br>
+<br><br>
+<a href="/index.html">index</a>
 </div>
-<div id='content'>
 <h1>Setup</h1>
-<p> New programmers are encouraged to install a GNU/Linux OS as development on windows is not pleasant or predictable. Ubuntu is popular. At least one person has had success using virtual box on windows and passing through the prolific The following packages are recommended: </p>
+<p> New programmers are encouraged to install a GNU/Linux OS as development on windows is not pleasant or predictable. Ubuntu is popular. At least one person has had success using Virtual Box on windows and passing through the prolific USB serial adapter. The following packages are recommended: </p>
 <ul>
 <li> gcc-arm-none-eabi </li>
 <li> build-essential </li>
@@ -23,48 +25,44 @@
 </ul>
 
 <p>Once you have this set up you can run: </p>
-<code> 
- git clone https://github.com/liberty-university-robotics-club/vex.git #clone the git repo to your computer
+<code>
+ git clone <a href="https://github.com/liberty-university-robotics-club/vex.git"> https://github.com/liberty-university-robotics-club/vex.git</a> #clone the git repo to your computer
  cd turing #enter the repo
  make #build the firmware
  make upload #upload the firmware to the robot (you may need to be root/in the dialout group)
 </code>
 <h2>How we use git</h2>
-<p> You should never commit to the master branch. Before making changes use 
-<code>
- git branch somename 
- git checkout somename
-</code> 
+<p> You should never commit to the master branch. Before making changes use <code> git branch somename </code> and <code> git checkout somename </code> 
 To create a new branch and switch to it, commit often and then use 
-<code>
- git push origin somename
-</code> 
+<code> git push origin somename </code> 
 To push it to the repo. Later we will merge it into master. This prevents people from stepping on each other. </p>
 <h1>Code organization</h1>
-<p> tank.c and tank.h contain dead reconning code, read tank.h for an idea of how the interface works. controlloop.h and controlloop.c contain generalized control loop code. opcontroll.c and auto.c contain the main loops for the auto and operator parts of the game respectively.</p>
+ Firstly, you can view and clone the code from <a href="https://github.com/liberty-university-robotics-club/vex"> https://github.com/liberty-university-robotics-club/vext</a>. 
+<p> Header files are kept in /include (which is in the include path) and c files are kept in src.</a>
+<p> include/API.h contains doxygen compatible comments for using the PROS API, it's essentially the robot's version of man pages.</p>
+<p> tank.c and tank.h contain dead reckoning code, read tank.h for an idea of how the interface works. controlloop.h and controlloop.c contain generalized control loop code. opcontroll.c and auto.c contain the main loops for the auto and operator parts of the game respectively.</p>
 
 <p> There is no wire diagram for the robot, the include file "robot.h" serves as both the wiring diagram and the pin definitions for the firmware. Changes to sensors and motors go there <em> first </em> and then the hardware is modified to match it. When in doubt read robot.h. It also contains a few constants such as the speed for various motors. Function prototypes do not belong there. </p> 
 
 <p> The sim directory contains some test harnesses. James said he got it working last year. build.sh and test.sh are used for building and running the simulation</p>
 
-<p> There are some binary files from PROS (an archive file and a java upload tool) along with linker scripts that are needed from the firmware folder. Don't touch those.</p>
+<p> There are some binary files from PROS (the PROS library and a java upload tool) along with linker scripts that are needed from the firmware folder. Don't touch those.</p>
 
 <h1>TODO</h1>
 <p> This section is where you should look when you come to Elijah or Stephen asking for something to do</p>
 <ul>
 <li> Fix the goofy joystick thing imp does when it boots up </li>
-<li> Test (and probably fix) the dead reconning code </li>
+<li> Test (and probably fix) the dead reckoning code </li>
 <li> (re)write actuator code for new robot. (this is a very good task for new programmers)</li>
 <li> Test cone seeking code </li>
 <li> design and implement autonomous strategy (this will get filled in later)</li>
 <li> Write better control loops (see Wikipedia on control loops for more info </li>
 <li> Write ultrasonic driver code that staggers pings to deal with interference. This requires a thorough understanding of the PROS API and the ability to write ISRs. This is difficult but could be useful.</li>
 <li> Look at the test harness code, there's always a lot of broken stuff there and it would be great if it worked.</li>
-
+</ul>
 <h1>Editing</h1>
-You can edit this page on github by going to <a href="https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html"> https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html</a>. The intention here is to make a sort of low maintenance wiki.
+You can edit this page on GitHub by going to <a href="https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html"> https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html</a>. The intention here is to make a sort of low maintenance wiki.
 <ul>
 </ul>
-</div>
 </body>
 </html>
