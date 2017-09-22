@@ -2,8 +2,9 @@
   background-color: #0A254E;
   color: white;
   width: 100%;
-  padding: 20px;
-  /*position: fixed;*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin:0px;
   left: 0px;
   right: 0px;
   top: 0px;
@@ -16,8 +17,33 @@
 #content {
   background-color: black;
 }
-code { white-space: pre; }
+code {
+  white-space: pre;
+}
 
 #jules {
   font-size: 1em;
+}
+
+body {
+	margin:0;
+}
+body * {
+	margin-left:16px;
+	margin-right:16px;
+	left: 16px;
+	right: 16px;
+}
+body * * {
+	width: auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+body code {
+	display: inline-block;
+	margin-left:64px;
+}
+p code {
+	display: auto;
+	margin-left:0px;
 }

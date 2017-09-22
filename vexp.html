@@ -9,9 +9,6 @@
 <h1>Various Tidbits About Vex Programming At LU</h1>
 </div>
 <div id='nav'>
-<br><br>
-<br><br>
-<br><br>
 <br>
 <a href="/index.html">Home</a>
 </div>
@@ -27,10 +24,10 @@
 
 <p>Once you have this set up you can run: </p>
 <code>
- git clone <a href="https://github.com/liberty-university-robotics-club/vex.git"> https://github.com/liberty-university-robotics-club/vex.git</a> #clone the git repo to your computer
- cd turing #enter the repo
- make #build the firmware
- make upload #upload the firmware to the robot (you may need to be root/in the dialout group)
+git clone <a href="https://github.com/liberty-university-robotics-club/vex.git">https://github.com/liberty-university-robotics-club/vex.git</a> #clone the git repo to your computer
+cd turing #enter the repo
+make #build the firmware
+make upload #upload the firmware to the robot (you may need to be root/in the dialout group)
 </code>
 <h2>How we use git</h2>
 <p> You should never commit to the master branch. Before making changes use <code> git branch somename </code> and <code> git checkout somename </code> 
@@ -38,7 +35,7 @@ To create a new branch and switch to it, commit often and then use
 <code> git push origin somename </code> 
 To push it to the repo. Later we will merge it into master. This prevents people from stepping on each other. </p>
 <h1>Code organization</h1>
- Firstly, you can view and clone the code from <a href="https://github.com/liberty-university-robotics-club/vex"> https://github.com/liberty-university-robotics-club/vext</a>. 
+<p> Firstly, you can view and clone the code from <a href="https://github.com/liberty-university-robotics-club/vex"> https://github.com/liberty-university-robotics-club/vext</a>. </p>
 <p> Header files are kept in /include (which is in the include path) and c files are kept in src.</a>
 <p> include/API.h contains doxygen compatible comments for using the PROS API, it's essentially the robot's version of man pages.</p>
 <p> tank.c and tank.h contain dead reckoning code, read tank.h for an idea of how the interface works. controlloop.h and controlloop.c contain generalized control loop code. opcontroll.c and auto.c contain the main loops for the auto and operator parts of the game respectively.</p>
@@ -62,7 +59,7 @@ To push it to the repo. Later we will merge it into master. This prevents people
 <li> Look at the test harness code, there's always a lot of broken stuff there and it would be great if it worked.</li>
 </ul>
 <h1>Editing</h1>
-You can edit this page on GitHub by going to <a href="https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html"> https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html</a>. The intention here is to make a sort of low maintenance wiki.
+<p> You can edit this page on GitHub by going to <a href="https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html"> https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html</a>. The intention here is to make a sort of low maintenance wiki.</p>
 <ul>
 </ul>
 </body>
