@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+#banner h3 {
+  text-align: center;
+}
+
 #content {
   background-color: black;
 }
