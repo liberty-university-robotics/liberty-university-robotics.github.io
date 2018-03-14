@@ -50,10 +50,10 @@ body * {
 }
 body * * {
 	width: auto;
-	margin-left:auto;
-	margin-right:auto;
-	    border-left: 6px solid red;
-    background-color: lightblue;
+	//margin-left:auto;
+	//margin-right:auto;
+	 
+    
 }
 body code {
 	display: inline-block;
