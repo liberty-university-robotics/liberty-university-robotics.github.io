@@ -19,7 +19,7 @@
 }
 
 #content {
-  background-color: black;
+  //background-color: ;
 }
 code {
   white-space: pre;
@@ -33,12 +33,12 @@ a {
 }
 nav a {margin-left:16px;
 	margin-right:16px
-	border-radius: 5px;
+	border-radius: 10px;
 	background-color: cornflowerblue;
 	color: white;
 }
 body {
-	background-color: teal;
+	background-color: lightgrey;
 	margin:0;
 }
 body * {
