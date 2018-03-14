@@ -31,12 +31,14 @@ code {
 a {
 	coler: white;
 }
-nav a {
-	border-radius: 10px;
+nav a {margin-left:16px;
+	margin-right:16px
+	border-radius: 5px;
 	background-color: cornflowerblue;
+	color: white;
 }
 body {
-	background-color: aqua;
+	background-color: teal;
 	margin:0;
 }
 body * {
@@ -44,6 +46,7 @@ body * {
 	margin-right:16px;
 	left: 16px;
 	right: 16px;
+	
 }
 body * * {
 	width: auto;
