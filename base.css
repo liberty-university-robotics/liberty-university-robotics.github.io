@@ -28,7 +28,7 @@ code {
 #jules {
   font-size: 1em;
 }
-a {
+/*a {
 	coler: white;
 }
 nav>a {margin-left:25px;
@@ -36,7 +36,7 @@ nav>a {margin-left:25px;
 	border-radius: 20px;
 	background-color: cornflowerblue;
 	color: white;
-}
+}*/
 body {
 	background-color: lightgrey;
 	margin:0;
