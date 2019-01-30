@@ -31,7 +31,7 @@ code {
 a {
 	coler: white;
 }
-nav a {margin-left:25px;
+nav>a {margin-left:25px;
 	margin-right:30px;
 	border-radius: 20px;
 	background-color: cornflowerblue;
@@ -41,7 +41,7 @@ body {
 	background-color: lightgrey;
 	margin:0;
 }
-body * {
+/*body * {
 	margin-left:16px;
 	margin-right:16px;
 	left: 16px;
@@ -54,7 +54,7 @@ body * * {
 	//margin-right:auto;
 	 
     
-}
+}*/
 body code {
 	display: inline-block;
 	margin-left:64px;
