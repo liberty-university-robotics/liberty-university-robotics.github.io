@@ -15,15 +15,16 @@
         <a href="/index.html">Home</a>
         <a href="/lst6.html">Vex Team main page</a>
     </div>
-    <div id="content">
-        <nav>
-            <p> If you want a quick c tutorial go to <a href="http://cslibrary.stanford.edu/101/EssentialC.pdf"> Stanfords tutorial.</a></p>
-            <h1>Setup</h1>
-            <p>Note: the flashing tool is no longer checked in with the project. I (Stephen) have left so someone who knows what they're doing should figure out how to get that to work without an IDE (bonus points if you can figure out how to get visual
-                studio to open make based projects because aparently some people actually like it)</p>
-            <h2>Special instructions for windows</h2>
-            <p> Just install <a href="https://pros.cs.purdue.edu">PROS</a> and <a href="git-scm.org">git</a> unless you know what your doing. <em> Check all of the boxes</em> when asked what to install. </p>
-            <strike> <p> Everything is harder on windows so I would recomend getting linux, since I'm stuck on it for the next foew weeks I went and figured it out.</p>
+    <div id="wrap">
+        <div id="content">
+            <nav>
+                <p> If you want a quick c tutorial go to <a href="http://cslibrary.stanford.edu/101/EssentialC.pdf"> Stanfords tutorial.</a></p>
+                <h1>Setup</h1>
+                <p>Note: the flashing tool is no longer checked in with the project. I (Stephen) have left so someone who knows what they're doing should figure out how to get that to work without an IDE (bonus points if you can figure out how to get visual
+                    studio to open make based projects because aparently some people actually like it)</p>
+                <h2>Special instructions for windows</h2>
+                <p> Just install <a href="https://pros.cs.purdue.edu">PROS</a> and <a href="git-scm.org">git</a> unless you know what your doing. <em> Check all of the boxes</em> when asked what to install. </p>
+                <strike> <p> Everything is harder on windows so I would recomend getting linux, since I'm stuck on it for the next foew weeks I went and figured it out.</p>
   <ul>
     <li> go get msys2 </li>
     <li> pacman -S gcc make git </li>
@@ -34,49 +35,50 @@
     </ul></strike>
 
 
-            <p>Once you have this set up you can run: </p>
-            <code>
+                <p>Once you have this set up you can run: </p>
+                <code>
 git clone <a href="https://github.com/liberty-university-robotics-club/vex.git">https://github.com/liberty-university-robotics-club/vex.git</a> #clone the git repo to your computer
 cd turing #enter the repo
 make #build the firmware
 <strike> make upload #upload the firmware to the robot (you may need to be root/in the dialout group)</strike> (see note on the flasher tool, for now use the ide)
 </code>
-            <h2>How we use git</h2>
-            <p> You should never commit to the master branch. Before making changes use <code> git branch somename </code> and <code> git checkout somename </code> To create a new branch and switch to it, commit often and then use
-                <code> git push origin somename </code> To push it to the repo. Later we will merge it into master. This prevents people from stepping on each other. </p>
-            <h1>Code organization</h1>
-            <p> Firstly, you can view and clone the code from <a href="https://github.com/liberty-university-robotics-club/vex"> https://github.com/liberty-university-robotics-club/vext</a>. </p>
-            <p> Header files are kept in /include (which is in the include path) and c files are kept in src.</a>
-                <p> The <a href="https://pros.cs.purdue.edu/v5/api/index.html">PROS documentation</a> Contains most of what you need to know to program the robot provided you know C++ (taught as CSIS112, there are decent books you can teach yourself from
-                    in the CS section of the library.) </p>
-                <p> tank.c and tank.h contain dead reckoning code, read tank.h for an idea of how the interface works. controlloop.h and controlloop.c contain generalized control loop code. opcontroll.c and auto.c contain the main loops for the auto and operator
-                    parts of the game respectively.</p>
-                <p> the main loop is in a function called opcontroll </p>
+                <h2>How we use git</h2>
+                <p> You should never commit to the master branch. Before making changes use <code> git branch somename </code> and <code> git checkout somename </code> To create a new branch and switch to it, commit often and then use
+                    <code> git push origin somename </code> To push it to the repo. Later we will merge it into master. This prevents people from stepping on each other. </p>
+                <h1>Code organization</h1>
+                <p> Firstly, you can view and clone the code from <a href="https://github.com/liberty-university-robotics-club/vex"> https://github.com/liberty-university-robotics-club/vext</a>. </p>
+                <p> Header files are kept in /include (which is in the include path) and c files are kept in src.</a>
+                    <p> The <a href="https://pros.cs.purdue.edu/v5/api/index.html">PROS documentation</a> Contains most of what you need to know to program the robot provided you know C++ (taught as CSIS112, there are decent books you can teach yourself from
+                        in the CS section of the library.) </p>
+                    <p> tank.c and tank.h contain dead reckoning code, read tank.h for an idea of how the interface works. controlloop.h and controlloop.c contain generalized control loop code. opcontroll.c and auto.c contain the main loops for the auto and
+                        operator parts of the game respectively.</p>
+                    <p> the main loop is in a function called opcontroll </p>
 
-                <p> There is no wire diagram for the robot, the include file "robot.h" serves as both the wiring diagram and the pin definitions for the firmware. Changes to sensors and motors go there <em> first </em> and then the hardware is modified to
-                    match it. When in doubt read robot.h. It also contains a few constants such as the speed for various motors. Function prototypes do not belong there. </p>
+                    <p> There is no wire diagram for the robot, the include file "robot.h" serves as both the wiring diagram and the pin definitions for the firmware. Changes to sensors and motors go there <em> first </em> and then the hardware is modified
+                        to match it. When in doubt read robot.h. It also contains a few constants such as the speed for various motors. Function prototypes do not belong there. </p>
 
-                <p> The sim directory contains some test harnesses. James said he got it working last year. build.sh and test.sh are used for building and running the simulation</p>
+                    <p> The sim directory contains some test harnesses. James said he got it working last year. build.sh and test.sh are used for building and running the simulation</p>
 
-                <p> There are some binary files from PROS (the PROS library <strike>and a java upload tool</strike>) along with linker scripts that are needed from the firmware folder. Don't touch those.</p>
+                    <p> There are some binary files from PROS (the PROS library <strike>and a java upload tool</strike>) along with linker scripts that are needed from the firmware folder. Don't touch those.</p>
 
-                <h1>TODO</h1>
-                <p> This section is where you should look when you come to Elijah or Stephen asking for something to do</p>
-                <ul>
-                    <li> Figure the vision sensor out, stephen is looking at the firmware and will have something whenever he feels like it (never.) </li>
-                    <li> Test (and probably fix) the dead reckoning code (the angualar rotation coeficient is wrong and will change for each robot) </li>
-                    <li> design and implement autonomous strategy (this will get filled in later)</li>
-                    <li> Write better control loops (see Wikipedia on control loops for more info ) this will be done for <b>EVERYTHNG</b> with the new motors because the have integrated encoders so there is no escuse not to.</li>
-                    <li> Write ultrasonic driver code that staggers pings to deal with interference. This requires a thorough understanding of the PROS API and the ability to write ISRs. This is difficult but could be useful.</li>
-                    <li> Look at the test harness code, there's always a lot of broken stuff there and it would be great if it worked.</li>
-                    <li> Figure out how to get the tools working on windows again.</li>
-                    <li> build the OS with the rest of the firmware.</li>
-                </ul>
-                <h1>Editing</h1>
-                <p> You can edit this page on GitHub by going to <a href="https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html"> https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html</a>.
-                    The intention here is to make a sort of low maintenance wiki.</p>
-                <ul>
-                </ul>
+                    <h1>TODO</h1>
+                    <p> This section is where you should look when you come to Elijah or Stephen asking for something to do</p>
+                    <ul>
+                        <li> Figure the vision sensor out, stephen is looking at the firmware and will have something whenever he feels like it (never.) </li>
+                        <li> Test (and probably fix) the dead reckoning code (the angualar rotation coeficient is wrong and will change for each robot) </li>
+                        <li> design and implement autonomous strategy (this will get filled in later)</li>
+                        <li> Write better control loops (see Wikipedia on control loops for more info ) this will be done for <b>EVERYTHNG</b> with the new motors because the have integrated encoders so there is no escuse not to.</li>
+                        <li> Write ultrasonic driver code that staggers pings to deal with interference. This requires a thorough understanding of the PROS API and the ability to write ISRs. This is difficult but could be useful.</li>
+                        <li> Look at the test harness code, there's always a lot of broken stuff there and it would be great if it worked.</li>
+                        <li> Figure out how to get the tools working on windows again.</li>
+                        <li> build the OS with the rest of the firmware.</li>
+                    </ul>
+                    <h1>Editing</h1>
+                    <p> You can edit this page on GitHub by going to <a href="https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html"> https://github.com/liberty-university-robotics/liberty-university-robotics.github.io/edit/master/vexp.html</a>.
+                        The intention here is to make a sort of low maintenance wiki.</p>
+                    <ul>
+                    </ul>
+        </div>
     </div>
 </body>
 
